@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem;" *ngFor="let item of userList">
+    <div class="card-body">
+        <div class="text-end">
+            <button class="btn btn-danger " (click)="removeUser(item.id)"><img
+                    src="https://img.icons8.com/office/16/null/delete-sign.png" /></button>
+        </div>
+
+        <h5 class="card-title">{{item.name}}</h5>
+        <p>{{item.username}}</p>
+        <p>{{item.email}}</p>
+        <p><a href="item.website">{{item.website}}</a></p>
+        <p id="votes" class="card-text">{{votes}}</p>
+        <div class="container d-flex justify-content-around">
+            <button id="up" class="btn btn-primary up" (click)="upVote()"><img
+                    src="https://img.icons8.com/emoji/48/000000/thumbs-up-light-skin-tone.png" /></button>
+            <button id="down" class="btn btn-primary down" (click)="downVote()"><img
+                    src="https://img.icons8.com/emoji/48/000000/thumbs-down-emoji.png" /></button>
+        </div>
+    </div>
+</div>
